@@ -277,7 +277,7 @@ void run_single(context_t * context){
 
 
 void run_multi(context_t * context){
-    int ncpu = 1; (long)sysconf(_SC_NPROCESSORS_ONLN);
+    int ncpu = (long)sysconf(_SC_NPROCESSORS_ONLN);
     int i;
     for (i = 0; i < ncpu; i++){
         pthread_t thread_a;
